@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Audit visual sitasi IEEE dan daftar pustaka tanpa mengunggah naskah.">
+  <title>SidikSitasi</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="src/audit.js"></script>
+  <script defer src="src/app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="#"><span class="mark" aria-hidden="true">[✓]</span><span>SidikSitasi<small>pemeriksa jejak rujukan</small></span></a>
+    <button id="download" class="outline">Unduh laporan JSON</button>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="kicker">Audit sebelum dikirim</p>
+        <h1>Setiap nomor harus punya <em>jejak yang jelas.</em></h1>
+        <p class="lede">Cocokkan sitasi IEEE di naskah dengan daftar pustaka, temukan nomor yang hilang, dan buka cuplikan sumber masalahnya. Semua berjalan di perangkatmu.</p>
+      </div>
+      <aside class="promise">
+        <strong>Privat secara bawaan</strong>
+        <p>Teks tidak meninggalkan browser. Input terakhir tersimpan hanya di penyimpanan lokal.</p>
+      </aside>
+    </section>
+
+    <section class="input-deck">
+      <div class="field-block">
+        <div class="field-head"><div><label for="manuscript">Naskah</label><span>Sitasi seperti [1], [2, 3], atau [4]-[6]</span></div><button class="plain" id="load-example">Muat contoh</button></div>
+        <textarea id="manuscript" spellcheck="false" placeholder="Tempel bagian naskah di sini..."></textarea>
+      </div>
+      <div class="field-block">
+        <div class="field-head"><div><label for="bibliography">Daftar pustaka</label><span>Satu entri dimulai dengan [nomor]</span></div></div>
+        <textarea id="bibliography" spellcheck="false" placeholder="[1] Nama Penulis, “Judul,” ..."></textarea>
+      </div>
+      <div class="runbar">
+        <p id="notice" role="status" aria-live="polite">Masukkan naskah dan daftar pustaka untuk memulai.</p>
+        <button id="audit" class="primary">Periksa kecocokan <span aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <section id="results" class="results" aria-label="Hasil audit">
+      <div class="result-head">
+        <div><p class="kicker">Hasil pemeriksaan</p><h2 id="verdict">Belum dianalisis</h2></div>
+        <div class="filters" role="group" aria-label="Filter tingkat masalah">
+          <button class="active" data-filter="semua">Semua</button>
+          <button data-filter="tinggi">Tinggi</button>
+          <button data-filter="sedang">Sedang</button>
+          <button data-filter="rendah">Rendah</button>
+        </div>
+      </div>
+      <div id="metrics" class="metrics">
+        <div><span>Sitasi unik</span><strong>—</strong></div><div><span>Referensi</span><strong>—</strong></div>
+        <div><span>Rujukan hilang</span><strong>—</strong></div><div><span>Total temuan</span><strong>—</strong></div>
+      </div>
+      <div class="result-grid">
+        <section class="issues-panel">
+          <div class="panel-title"><h3>Temuan</h3><span id="issue-count">0 item</span></div>
+          <div id="issue-list" class="issue-list"><p class="empty">Hasil audit akan muncul di sini.</p></div>
+        </section>
+        <section class="trace-panel">
+          <div class="panel-title"><h3>Jejak sitasi</h3><span>Klik nomor untuk melihat konteks</span></div>
+          <div id="trace-list" class="trace-list"><p class="empty">Belum ada jejak sitasi.</p></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer>SidikSitasi 1.0 · Analisis lokal · Format IEEE bernomor</footer>
+</body>
+</html>

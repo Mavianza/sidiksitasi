@@ -1,0 +1,2 @@
+Sistem informasi membantu pencatatan terpusat [1]. Pendekatan desain dijelaskan pada [2], [3].
+Evaluasi fungsi dapat mengikuti beberapa penelitian [4]-[5]. Klaim tambahan memakai [8].

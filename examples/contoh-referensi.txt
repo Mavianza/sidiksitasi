@@ -1,0 +1,6 @@
+[1] A. Penulis, “Sistem Informasi Terpadu,” Jurnal Contoh, 2024.
+[2] B. Penulis, “Perancangan Antarmuka,” Jurnal Contoh, 2023.
+[3] C. Penulis, “Validasi Kebutuhan,” Prosiding Contoh, 2022.
+[4] D. Penulis, “Pengujian Perangkat Lunak,” Jurnal Contoh, 2021.
+[5] E. Penulis, “Evaluasi Sistem,” Jurnal Contoh, 2020.
+[6] F. Penulis, “Referensi yang Belum Disitasi,” Jurnal Contoh, 2019.
